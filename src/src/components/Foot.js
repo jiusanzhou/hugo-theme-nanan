@@ -25,7 +25,8 @@ const Foot = ({...props}) => {
 
     let license = {
         name: '',
-        description: '本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议',
+        href: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+        description: '知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议',
     }
 
     let author = {
@@ -40,7 +41,7 @@ const Foot = ({...props}) => {
 
     return <footer {...props} className={styles.footer}>
     <section>{links.map((item, index)=>(<a key={index} href={item.href} target="_blank">{item.title}</a>))}</section>
-    <p>{license.description}</p>
+    <p>所有文章采用<a target='_blank' href={license.href}>{license.description}</a></p>
     <p>Make with ❤️ by <a href={author.href} target="_blank">{author.name}</a> from <a href={author.at.href} target="_blank">{author.at.name}</a>, {author.base}</p>
     </footer>
 }

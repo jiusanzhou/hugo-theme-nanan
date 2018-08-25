@@ -7,12 +7,12 @@ import styles from  './Cover.less'
 const Cover = ({...props}) => {
 
     let site = {
-        title: '南安说',
+        title: '安南说',
         href: '/',
         avatar: 'https://avatars2.githubusercontent.com/u/39580782?s=460&v=4',
         description: '不把生命献给无知、平庸和低俗!',
         bio: '你的余生都在我这里!',
-        cover: 'https://lijiarui.github.io/images/cover-day.jpg',
+        cover: '/public/assets/Togger.jpeg',
     }
 
     let socials = [
