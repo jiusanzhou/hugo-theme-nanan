@@ -12,6 +12,7 @@ const Cover = ({...props}) => {
         avatar: 'https://avatars2.githubusercontent.com/u/39580782?s=460&v=4',
         description: '不把生命献给无知、平庸和低俗!',
         bio: '你的余生都在我这里!',
+        cover: 'https://lijiarui.github.io/images/cover-day.jpg',
     }
 
     let socials = [
@@ -20,21 +21,21 @@ const Cover = ({...props}) => {
             id: 'jiusanzhou',
         },
         {
-            type: 'email',
-            id: 'zoe@wellwell.work',
-        },
-        {
             type: 'github',
             id: 'jiusanzhou',
         },
     ]
 
     return <section {...props}>
-    <div className={styles.cover}>
-        <h2>{site.title}</h2>
+    <div className={styles.cover} style={{
+        backgroundImage: `url(${site.cover})`,
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+    }}>
+        <h1>{site.title}</h1>
         <blockquote>{site.description}</blockquote>
         <blockquote>{site.bio}</blockquote>
-        <section>{socials.map((item, index)=>(<Social data={item} key={index} />))}</section>
+        <section className={styles.socials}>{socials.map((item, index)=>(<Social data={item} key={index} />))}</section>
     </div>
     </section>
 }

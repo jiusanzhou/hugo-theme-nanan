@@ -19,7 +19,7 @@ const Layout = ( { children }) => {
         <Cover className={styles.cover} />
         <section className={styles.container}>
             <Bar className={styles.bar} />
-            {children}
+            <section className={styles.containerMain} >{children}</section>
             <Foot className={styles.foot} />
         </section>
     </div>

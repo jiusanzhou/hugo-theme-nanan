@@ -1,0 +1,27 @@
+
+
+.pager {
+    a {
+        color: #333;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 0 5px;
+        padding: 5px 10px;
+        &[current] {
+            background: #EEE !important;
+            font-weight: bolder;
+        }
+        &:hover {
+            color: #e78170 !important;
+            background: #EEE !important;
+            text-decoration: none !important;
+        }
+    }
+    .pagerExtend {
+        padding: 10px;
+        &:hover, &:active {
+          color: #ca0002;
+        }
+    }
+}

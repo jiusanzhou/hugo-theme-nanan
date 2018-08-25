@@ -3,6 +3,18 @@
     background-color: #2b2b2b;
 }
 
+body {
+    font-family: -apple-system, "Open Sans", HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+  
+a, a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ca0002;
+}
+
 .main {
     width: 100vw;
     height: 100vh;
@@ -22,8 +34,76 @@
         height: 100%;
     }
     .container {
-        flex: 5;
-        display: flex;
-        height: 100%;
+        overflow-y: scroll;
+        flex: 7;
+        flex-direction: column;
+        .containerMain {
+            padding-left: 32px;
+            padding-top: 45px;
+            display: flex;
+            width: 75%;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 960px){
+        // 固定Nav为80px
+        // 隐藏Queto
+        // 隐藏Title
+        .nav {
+            width: 65px;
+            h1, blockquote {
+                display: none;
+            }
+            img {
+                transform: scale(0.8);
+            }
+        }
+        .container {
+            .containerMain {
+                width: 90%;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        // 隐藏Cover
+        // 缩小Nav为方块
+
+        .nav {
+            height: 45px;
+            width: 45px;
+            overflow: hidden;
+            position: fixed;
+            flex: unset;
+            h1, blockquote {
+                display: none;
+            }
+            img {
+                display: none;
+            }
+        }
+        .bar {
+            margin-left: 45px;
+        }
+        .nav:hover {
+            height: 100%;
+        }
+
+        .cover {
+            display: none;
+        }
+        .container {
+            .containerMain {
+                width: 100%;
+                margin: 0;
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
     }
 }

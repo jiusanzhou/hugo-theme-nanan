@@ -1,5 +1,6 @@
 .logo {
     margin-top: 50px;
+    margin-bottom: 20px;
     .avatar {
         height: 80px;
         width: 80px;
@@ -11,11 +12,18 @@
 .siteTitle a {
     text-decoration: none;
     color: #fff;
+    padding: 0 5px;
+    &:hover {
+        color: #fff;
+    }
 }
 
 .description {
     color: #cccccc;
     line-height: 1.5rem;
+    writing-mode: vertical-rl;
+    width: unset;
+    text-align: left;
 }
 
 .nav {
@@ -31,11 +39,11 @@
         height: 45px;
         line-height: 45px;
         text-decoration: none;
-        border-radius: 45px;
+        // border-radius: 45px;
         color: #fff;
 
         &:hover {
-            background-color: #e78170;
+            background:#1a1a1a; 
         }
     }
 }

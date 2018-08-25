@@ -15,22 +15,22 @@ const Nav = ({...props}) => {
         {
             title: '首页',
             icon: '',
-            href: '/#',
+            href: '#',
         },
         {
             title: '归档',
             icon: '',
-            href: '/archives/#',
+            href: '#',
         },
         {
             title: '标签',
             icon: '',
-            href: '/tags/#',
+            href: '#',
         },
         {
             title: '关于',
             icon: '',
-            href: '/about/#',
+            href: '#',
         },
     ]
 
