@@ -14,7 +14,8 @@ const ListPage = () => {
             {
                 title: '构建人脸识别聊天机器人--Wechaty Blinder',
                 abstract: '这是我在2017-北京-谷歌开发者节 TensorFlow 分会场的分享，本次活动是由谷歌（中国）、谷歌北京开发者社区主办，北京邮电大学协办的2017谷歌开发者节北京站在北京邮电大学圆满举办。',
-                date: '2018-01-25T15:04:27.000Z',
+                content: null,
+                time: '2018-01-25T15:04:27.000Z',
                 comments: true,
                 slug: '2018-01-25-how-to-build-face-blinder-bot',
                 tags: [
@@ -38,10 +39,14 @@ const ListPage = () => {
                     }
                 ],
                 permalink: '#',
-                path: '#',
+                path: '/p/test',
+                meta: {},
                 author: {
                     name: '周筱鲁',
-                    href: '#'
+                    id: 'jiusanzhou',
+                    href: '/author/jiusanzhou',
+                    avatar: 'https://avatars2.githubusercontent.com/u/39580782?s=460&v=4',
+                    bio: '余生从此开始！',
                 }
             }
         ],
