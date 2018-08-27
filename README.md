@@ -1,6 +1,6 @@
 [![GitHub release](https://img.shields.io/github/release/jiusanzhou/hugo-theme-nanan.svg?style=for-the-badge)](https://github.com/jiusanzhou/hugo-theme-nanan/releases/latest)
 [![GitHub Release Date](https://img.shields.io/github/release-date/jiusanzhou/hugo-theme-nanan.svg?style=for-the-badge)](https://github.com/Mjiusanzhou/hugo-theme-nanan/releases)
-[![license](https://img.shields.io/github/license/jiusanzou/hugo-theme-nanan.svg?style=for-the-badge)](https://github.com/jiusanzhou/hugo-theme-nanan/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/jiusanzhou/hugo-theme-nanan.svg?style=for-the-badge)](https://github.com/jiusanzhou/hugo-theme-nanan/blob/master/LICENSE)
 
 [![安南说 – :heart:楠 theme for Hugo](https://avatars2.githubusercontent.com/u/39580782?s=460&v=4)](https://github.com/nanshuo)
 
