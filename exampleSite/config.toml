@@ -1,9 +1,6 @@
 baseURL = "https://annan.tk"
 title = "安南说"
 
-# for smart copyright line, leave this blank and check [params.copyright]
-copyright = ""
-
 theme = "hugo-theme-nanan"
 
 disqusShortname = ""
@@ -26,15 +23,20 @@ defaultContentLanguage = "zh"
 title = "安南说"
 description = "余生已开始!"
 logo = "https://avatars2.githubusercontent.com/u/39580782?s=460&v=4"
-title404 = "不能触摸的回忆!"
 
 [params.cover]
-image = ''
+image = "assets/images/Togger.jpeg"
+
+[[params.quotes]]
+text = "不把生命献给无知、平庸和低俗!"
+
+[[params.quotes]]
+text = "你我的余生都在这里!"
 
 [params.assets]
 favicon = "favicon.ico"
-customCSS = ["css/custom.css"]
-customJS = ["http://localhost:8000/index.js"]
+customCSS = ["css/custom.css", "assets/css/index.css"]
+customJS = ["js/custom.js"]
 gopher = "" # used in 404 template ( Generator: https://gopherize.me )
 
 [params.licence]
@@ -54,6 +56,10 @@ url = ""
 
 [params.copyright.base]
 name = "杭州"
+
+[params.404]
+go = "/"
+title = "不能触摸的回忆!"
 
 [params.settings]
 # date & time format: https://golang.org/pkg/time/
@@ -99,7 +105,7 @@ twitter = "jiusanzhou"
 telegram = "jiusanzhou"
 
 [params.comments]
-enable = false
+enable = true
 
 [params.comments.staticman]
 enable = true
@@ -136,12 +142,13 @@ tag = "tags"
 
 [permalinks]
 page = "/:slug/"
+post = "/:slug/"
 
 [[menu.main]]
-name = "Repo"
-weight = -10
-identifier = "repository"
-url = "https://github.com/jiusanzhou/hugo-theme-nanan"
+name = "主页"
+weight = 1
+identifier = "home"
+url = "/"
 
 [blackfriday]
 hrefTargetBlank = true

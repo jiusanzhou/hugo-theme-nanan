@@ -6,46 +6,37 @@ window.NANAN_SETTING = {
     baseURL: "{{ .Site.BaseURL }}",
     logo: "{{ .Site.Params.info.logo }}",
     title: "{{ .Site.Title }}",
-    description: "{{- with .Description -}}{{- . -}}{{- else -}}{{- with .Site.Params.info.description -}}{{- . -}}{{- end -}}{{- end -}}",
-    cover: "",
-    menus: [],
-    quotes: [],
+    description: "{{ .Site.Params.info.description }}",
+    cover: {{ .Site.Params.cover }},
+    menus: {{ .Site.Menus.main }},
+    quotes: {{ .Site.Params.quotes }},
     links: [],
-    copyright: {
-        holder: {
-            name: "{{ $copyright.holder.name }}",
-            url: "{{ $copyright.holder.url }}",
-        },
-        from: {
-            name: "{{ $copyright.from.name }}",
-            url: "{{ $copyright.from.url }}",
-        },
-        base: {
-            name: "{{ $copyright.base.name }}",
-            url: "{{ $copyright.base.url }}",
-        },
-        start: "{{ $copyright.startYear }}",
-    },
-    licence: {
-        name: "{{ $licence.name }}",
-        url: "{{ $licence.url }}",
-    },
-    language: "{{ . }}",
+    copyright: {{ $copyright }},
+    licence: {{ $licence }},
+    language: "{{ .Site.Language.Lang }}",
     comments: {
-        enable: {{.Site.Params.comments.enable}},
+        enable: {{ .Site.Params.comments.enable }},
     }
 }
 </script>
-{{- if not .IsPage -}}
+{{- if .IsPage -}}
 <script>
 window.NANAN_PAGE = {
     title: "{{ .Title }}",
     summary: "{{ .Summary }}",
+    url: "{{ .URL }}",
+    permalink: "{{.Permalink }}",
     content: "{{ .Content }}",
     authors: [],
-    keywords: [],
-    tags: [],
-    category: {},
+    keywords: {{ .Keywords }},
+    tags: {{ .Params.tags }},
+    categories: {{ .Params.categories }},
+    wordcount: {{ .WordCount }},
+    readingtime: "{{ .ReadingTime }}",
+    publish: "{{ .PublishDate }}",
+    lastmodify: "{{ .Lastmod }}",
+    prev: "{{ .Prev }}"
+    next: "{{ .Next }}"
 }
 </script>
 {{- end -}}

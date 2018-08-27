@@ -1,0 +1,9 @@
+<section class="cover___3tu9b">
+    <div class="cover___1C3a6" style="background-image: url({{ .Site.Params.cover.image | relURL }}); background-position: center center; background-size: cover;">
+        <h1>{{ .Site.Title }}</h1>
+        {{- range .Site.Params.quotes -}}
+            <blockquote>{{ .text }} </blockquote>
+        {{- end -}}
+        <section class="socials___2UVQz"></section>
+    </div>
+</section>

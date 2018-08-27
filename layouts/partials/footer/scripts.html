@@ -1,1 +1,1 @@
-<script>window.__public_path__='{{- "assets/js/" | relURL -}}'</script>{{ partial "footer/extra" . }}<script src='{{ print "/assets/js/" .Site.Data.assets.main.js | relURL }}'></script>{{- range .Site.Params.assets.customJS -}}<script src='{{ . | relURL }}'></script>{{- end -}}
+<script>window.__public_path__='{{- "assets/js/" | relURL -}}'</script>{{ partial "footer/extra" . }}<script src='{{ print "/assets/js/" .Site.Data.assets.index.js | relURL }}'></script>{{- range .Site.Params.assets.customJS -}}<script src='{{ . | relURL }}'></script>{{- end -}}

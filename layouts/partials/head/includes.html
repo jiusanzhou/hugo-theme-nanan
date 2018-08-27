@@ -3,5 +3,4 @@
 {{- range .Site.Params.assets.customCSS -}}
     <link rel='stylesheet' href='{{ . | relURL }}'>
 {{- end -}}
-{{- partial "head/css" . -}}
 {{- partial "head/analytics" . -}}

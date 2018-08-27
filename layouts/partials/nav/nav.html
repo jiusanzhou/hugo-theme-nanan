@@ -1,0 +1,16 @@
+<section class="nav___2PijA">
+    <a class="logo___2PiE3" href="/" title="{{ .Site.Title }}">
+        <img class="avatar___1GGrY" alt="{{ .Site.Title }}" src="{{ .Site.Params.info.logo }}">
+    </a>
+    <h1 class="siteTitle___2KziA">
+        <a title="{{ .Site.Title }}{{ .Site.Params.seo.titleSeparator }}{{ .Site.Params.info.description }}" href="/">{{ .Site.Title }}</a>
+    </h1>
+    <nav class="nav___1y0GV">
+        {{- range .Site.Menus.main -}}
+            {{- $isCurrent := ( or ( $.IsMenuCurrent "main" . ) ( $.HasMenuCurrent "main" . ) ) -}}
+            <a class="item___29JXM" href="{{ .URL }}" title="{{ .Name }}" {{- if $isCurrent }} current {{- end -}}>{{ .Name }}</a>
+        {{- end -}}
+    </nav>
+    {{- $quote := index .Site.Params.quotes 0 -}}
+    <blockquote class="description___2OIqj">{{ $quote.text }}</blockquote>
+</section>
