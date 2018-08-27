@@ -1,0 +1,51 @@
+<!-- 添加设置等信息 -->
+{{- $licence := ( .Site.Params.licence ) -}}
+{{- $copyright := ( .Site.Params.copyright ) -}}
+<script>
+window.NANAN_SETTING = {
+    baseURL: "{{ .Site.BaseURL }}",
+    logo: "{{ .Site.Params.info.logo }}",
+    title: "{{ .Site.Title }}",
+    description: "{{- with .Description -}}{{- . -}}{{- else -}}{{- with .Site.Params.info.description -}}{{- . -}}{{- end -}}{{- end -}}",
+    cover: "",
+    menus: [],
+    quotes: [],
+    links: [],
+    copyright: {
+        holder: {
+            name: "{{ $copyright.holder.name }}",
+            url: "{{ $copyright.holder.url }}",
+        },
+        from: {
+            name: "{{ $copyright.from.name }}",
+            url: "{{ $copyright.from.url }}",
+        },
+        base: {
+            name: "{{ $copyright.base.name }}",
+            url: "{{ $copyright.base.url }}",
+        },
+        start: "{{ $copyright.startYear }}",
+    },
+    licence: {
+        name: "{{ $licence.name }}",
+        url: "{{ $licence.url }}",
+    },
+    language: "{{ . }}",
+    comments: {
+        enable: {{.Site.Params.comments.enable}},
+    }
+}
+</script>
+{{- if not .IsPage -}}
+<script>
+window.NANAN_PAGE = {
+    title: "{{ .Title }}",
+    summary: "{{ .Summary }}",
+    content: "{{ .Content }}",
+    authors: [],
+    keywords: [],
+    tags: [],
+    category: {},
+}
+</script>
+{{- end -}}
